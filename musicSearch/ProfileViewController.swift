@@ -8,19 +8,62 @@
 
 import UIKit
 import SafariServices
+import StoreKit
 
 class ProfileViewController: UIViewController {
 
     @IBAction func spotifyLogin(_ sender: Any) {
-        authenticate()
+        authenticateSpotify()
     }
+    
+    @IBAction func AMLogin(_ sender: Any) {
+        authenticateAM()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func authenticate() {
+    func displayErrorMessage(error: Error) {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "Error",
+                                                    message: error.localizedDescription,
+                                                    preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func successfullLogin() {
+        DispatchQueue.main.async {
+            // Present next view controller or use performSegue(withIdentifier:, sender:)
+            // self.present(MainViewController(), animated: true, completion: nil)
+            
+            let alertController = UIAlertController(title: "Success", message: "You have been logged in to Spotify", preferredStyle: UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    // APPLE MUSIC LOGIN
+    
+    func authenticateAM() {
+        //AppleMusicManager.instance.requestAuthorization()
+        AppleMusicManager.instance.requestUserToken()
+        //AppleMusicManager.instance.requestCapabilities()
+        //AppleMusicManager.instance.requestCountryCode()
+    }
+    
+    // SPOTIFY LOGIN
+    
+    func authenticateSpotify() {
         let appURL = SPTAuth.defaultInstance().spotifyAppAuthenticationURL()!
         let webURL = SPTAuth.defaultInstance().spotifyWebAuthenticationURL()!
         
@@ -60,38 +103,11 @@ class ProfileViewController: UIViewController {
             
             // Check if there is a session
             if let session = session {
-                print(session.accessToken)
                 
                 KeyChainManager.instance.setSpotifyToken(token: session.accessToken)
                 // If there is use it to login to the audio streaming controller where we can play music.
                 // SPTAudioStreamingController.sharedInstance().login(withAccessToken: session.accessToken)
             }
-        }
-    }
-    
-    func displayErrorMessage(error: Error) {
-        DispatchQueue.main.async {
-            let alertController = UIAlertController(title: "Error",
-                                                    message: error.localizedDescription,
-                                                    preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alertController.addAction(okAction)
-            
-            self.present(alertController, animated: true, completion: nil)
-        }
-    }
-    
-    func successfullLogin() {
-        DispatchQueue.main.async {
-            // Present next view controller or use performSegue(withIdentifier:, sender:)
-            // self.present(MainViewController(), animated: true, completion: nil)
-            
-            let alertController = UIAlertController(title: "Success", message: "You have been logged in to Spotify", preferredStyle: UIAlertControllerStyle.alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alertController.addAction(okAction)
-            
-            self.present(alertController, animated: true, completion: nil)
         }
     }
 

@@ -44,12 +44,25 @@
                                     <action selector="spotifyLogin:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="DwA-ud-ZYk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-Nk-wwe">
+                                <rect key="frame" x="0.0" y="394" width="375" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Apple music login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="AMLogin:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="3fP-Sh-jGO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gAK-8R-R5r" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="14J-cx-4Ge"/>
                             <constraint firstItem="gAK-8R-R5r" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="298" id="GUg-Q8-yoS"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="gAK-8R-R5r" secondAttribute="trailing" id="K9u-hR-byY"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="sfL-Nk-wwe" secondAttribute="trailing" id="hE4-eO-8bo"/>
+                            <constraint firstItem="sfL-Nk-wwe" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="j1A-J1-KU8"/>
+                            <constraint firstItem="sfL-Nk-wwe" firstAttribute="top" secondItem="gAK-8R-R5r" secondAttribute="bottom" constant="36" id="ny8-XX-ifv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
