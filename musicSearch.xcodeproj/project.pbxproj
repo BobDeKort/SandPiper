@@ -12,8 +12,14 @@
 		C40A8EE0202394AE0085E22D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A8EDF202394AE0085E22D /* SearchViewController.swift */; };
 		C40A8EE2202394AE0085E22D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40A8EE1202394AE0085E22D /* ProfileViewController.swift */; };
 		C40A8EE5202394AE0085E22D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40A8EE3202394AE0085E22D /* Main.storyboard */; };
-		C40A8EE7202394AE0085E22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40A8EE6202394AE0085E22D /* Assets.xcassets */; };
 		C40A8EEA202394AE0085E22D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40A8EE8202394AE0085E22D /* LaunchScreen.storyboard */; };
+		C4335F222032CC440022278D /* ProfileVCConnectButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4335F212032CC440022278D /* ProfileVCConnectButtons.swift */; };
+		C4335F252032CC980022278D /* ProfileVCConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4335F242032CC980022278D /* ProfileVCConnect.swift */; };
+		C4335F272032CCC90022278D /* ProfileVCTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4335F262032CCC90022278D /* ProfileVCTableView.swift */; };
+		C448389820324FF80063CFAC /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448389720324FF80063CFAC /* SongTableViewCell.swift */; };
+		C448389A203250070063CFAC /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4483899203250070063CFAC /* AlbumTableViewCell.swift */; };
+		C449AFDF2032AE34002358EB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449AFDE2032AE34002358EB /* UIViewControllerExtension.swift */; };
+		C449AFE12032B3FF002358EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C449AFE02032B3FE002358EB /* Assets.xcassets */; };
 		C4EF875B20296D09002AEA55 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EF875820296D09002AEA55 /* SpotifyAudioPlayback.framework */; };
 		C4EF875C20296D09002AEA55 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EF875920296D09002AEA55 /* SpotifyAuthentication.framework */; };
 		C4EF875D20296D09002AEA55 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EF875A20296D09002AEA55 /* SpotifyMetadata.framework */; };
@@ -32,9 +38,15 @@
 		C40A8EDF202394AE0085E22D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C40A8EE1202394AE0085E22D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C40A8EE4202394AE0085E22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C40A8EE6202394AE0085E22D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C40A8EE9202394AE0085E22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C40A8EEB202394AE0085E22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4335F212032CC440022278D /* ProfileVCConnectButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCConnectButtons.swift; sourceTree = "<group>"; };
+		C4335F242032CC980022278D /* ProfileVCConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCConnect.swift; sourceTree = "<group>"; };
+		C4335F262032CCC90022278D /* ProfileVCTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVCTableView.swift; sourceTree = "<group>"; };
+		C448389720324FF80063CFAC /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		C4483899203250070063CFAC /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		C449AFDE2032AE34002358EB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		C449AFE02032B3FE002358EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4EF875820296D09002AEA55 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 		C4EF875920296D09002AEA55 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		C4EF875A20296D09002AEA55 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
@@ -101,19 +113,40 @@
 			isa = PBXGroup;
 			children = (
 				C40A8EDD202394AE0085E22D /* AppDelegate.swift */,
-				C4F72F5D2029354600692EEE /* Managers */,
 				C4EF876220296EC0002AEA55 /* Constants.swift */,
+				C4F72F5D2029354600692EEE /* Managers */,
+				C4335F282032CD920022278D /* Table view cells */,
 				C40A8EDF202394AE0085E22D /* SearchViewController.swift */,
-				C40A8EE1202394AE0085E22D /* ProfileViewController.swift */,
+				C4335F232032CC4D0022278D /* Profile */,
 				C4EF875720296CD5002AEA55 /* Frameworks */,
 				C4EF876420297235002AEA55 /* Extentions */,
 				C40A8EE3202394AE0085E22D /* Main.storyboard */,
-				C40A8EE6202394AE0085E22D /* Assets.xcassets */,
+				C449AFE02032B3FE002358EB /* Assets.xcassets */,
 				C40A8EE8202394AE0085E22D /* LaunchScreen.storyboard */,
 				C40A8EEB202394AE0085E22D /* Info.plist */,
 				C4EF875E20296D48002AEA55 /* musicSearch-Bridging-Header.h */,
 			);
 			path = musicSearch;
+			sourceTree = "<group>";
+		};
+		C4335F232032CC4D0022278D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C40A8EE1202394AE0085E22D /* ProfileViewController.swift */,
+				C4335F212032CC440022278D /* ProfileVCConnectButtons.swift */,
+				C4335F242032CC980022278D /* ProfileVCConnect.swift */,
+				C4335F262032CCC90022278D /* ProfileVCTableView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C4335F282032CD920022278D /* Table view cells */ = {
+			isa = PBXGroup;
+			children = (
+				C448389720324FF80063CFAC /* SongTableViewCell.swift */,
+				C4483899203250070063CFAC /* AlbumTableViewCell.swift */,
+			);
+			path = "Table view cells";
 			sourceTree = "<group>";
 		};
 		C4EF875720296CD5002AEA55 /* Frameworks */ = {
@@ -130,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				C4EF87652029724C002AEA55 /* NotificationNameExtention.swift */,
+				C449AFDE2032AE34002358EB /* UIViewControllerExtension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -208,7 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C40A8EEA202394AE0085E22D /* LaunchScreen.storyboard in Resources */,
-				C40A8EE7202394AE0085E22D /* Assets.xcassets in Resources */,
+				C449AFE12032B3FF002358EB /* Assets.xcassets in Resources */,
 				C40A8EE5202394AE0085E22D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,8 +314,14 @@
 				C4F72F582029349300692EEE /* AppleMusicManager.swift in Sources */,
 				C4F72F5C2029352C00692EEE /* KeyChainManager.swift in Sources */,
 				C40A8EE2202394AE0085E22D /* ProfileViewController.swift in Sources */,
+				C4335F272032CCC90022278D /* ProfileVCTableView.swift in Sources */,
 				C4F72F5A2029349F00692EEE /* SpotifyManager.swift in Sources */,
+				C448389A203250070063CFAC /* AlbumTableViewCell.swift in Sources */,
 				C4EF876320296EC0002AEA55 /* Constants.swift in Sources */,
+				C4335F222032CC440022278D /* ProfileVCConnectButtons.swift in Sources */,
+				C448389820324FF80063CFAC /* SongTableViewCell.swift in Sources */,
+				C449AFDF2032AE34002358EB /* UIViewControllerExtension.swift in Sources */,
+				C4335F252032CC980022278D /* ProfileVCConnect.swift in Sources */,
 				C40A8EDE202394AE0085E22D /* AppDelegate.swift in Sources */,
 				C40A8EE0202394AE0085E22D /* SearchViewController.swift in Sources */,
 			);

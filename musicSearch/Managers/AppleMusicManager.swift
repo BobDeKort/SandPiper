@@ -15,8 +15,9 @@ class AppleMusicManager {
     let cloudServiceController = SKCloudServiceController()
     
     // Request authorization from the user to access apple music
-    func requestAuthorization() {
+    func requestAuthorization(completionHandler: @escaping (SKCloudServiceAuthorizationStatus) -> ()) {
         SKCloudServiceController.requestAuthorization { (status) in
+            completionHandler(status)
             switch status {
             case .authorized:
                 print("Authorized")
@@ -34,6 +35,7 @@ class AppleMusicManager {
         }
     }
     
+    // Request a list of capabilities the user can do and what we can do with the User token
     func requestCapabilities() {
         cloudServiceController.requestCapabilities { (capabilities, error) in
             guard error == nil else {
@@ -56,6 +58,7 @@ class AppleMusicManager {
         }
     }
     
+    // Request country the user account is assosiated with
     func requestCountryCode() {
         cloudServiceController.requestStorefrontCountryCode { (countryCode, error) in
             guard error == nil else {
@@ -71,15 +74,18 @@ class AppleMusicManager {
         }
     }
     
-    func requestUserToken() {
-        print("Request")
+    // Request the user to authenticate with apple music to access more user specific information
+    func requestUserToken(completionHandler: @escaping (Bool)->()) {
         cloudServiceController.requestUserToken(forDeveloperToken: Constants.developerKey) { (response, error) in
             guard error == nil else {
                 print(error!)
+                completionHandler(false)
                 return
             }
+            
             if let response = response {
-                print(response)
+                completionHandler(true)
+                print("Apple Music Token: \(response))")
                 KeyChainManager.instance.setAppleMusicToken(token: response)
             }
         }

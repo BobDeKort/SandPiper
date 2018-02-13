@@ -10,5 +10,10 @@ import Foundation
 
 class SpotifyManager {
     static let instance = SpotifyManager()
+    let appURL = SPTAuth.defaultInstance().spotifyAppAuthenticationURL()!
+    let webURL = SPTAuth.defaultInstance().spotifyWebAuthenticationURL()!
     
+    func openSpotifyAuthentication() {
+        UIApplication.shared.open(SpotifyManager.instance.appURL, options: [:], completionHandler: nil)
+    }
 }

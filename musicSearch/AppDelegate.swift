@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Set the status bar at the top of the screen to white
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        // Checks Spotify permissions for the app
         setupSpotify()
         return true
     }
@@ -31,22 +35,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                      //SPTAuthUserLibraryReadScope,
                                                      //SPTAuthUserLibraryModifyScope]
         
-        // Start the player (this is only need for applications that using streaming, which we will use
-        // in this tutorial)
-//        do {
-//            try SPTAudioStreamingController.sharedInstance().start(withClientId: Constants.clientID)
-//        } catch {
-//            fatalError("Couldn't start Spotify SDK")
-//        }
     }
     
-    //This function is called when the app is opened by a URL
+    // This function is called when the app is opened by a URL
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         print("Did open with url")
-        //Check if this URL was sent from the Spotify app or website
+        // Check if this URL was sent from the Spotify app or website
         if SPTAuth.defaultInstance().canHandle(url) {
             print("Can handel")
-            //Send out a notification which we can listen for in our sign in view controller
+            // Send out a notification which we can listen for in our sign in view controller
             NotificationCenter.default.post(name: NSNotification.Name.Spotify.authURLOpened, object: url)
             
             return true
