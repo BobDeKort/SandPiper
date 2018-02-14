@@ -49,12 +49,6 @@ class AppleMusicManager {
             let canPlay = capabilities.contains(.musicCatalogPlayback)
             let canAdd = capabilities.contains(.addToCloudMusicLibrary)
             let canSubscribe = capabilities.contains(.musicCatalogSubscriptionEligible)
-            print("canPlay")
-            print(canPlay)
-            print("canAdd")
-            print(canAdd)
-            print("canSubscribe")
-            print(canSubscribe)
         }
     }
     

@@ -80,40 +80,48 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xiH-36-MEU">
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="xiH-36-MEU">
                                                     <rect key="frame" x="15" y="11" width="345" height="80"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="TheIncredibleTrueStory" translatesAutoresizingMaskIntoConstraints="NO" id="C4W-HD-gvU">
                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="C4W-HD-gvU" secondAttribute="height" multiplier="1:1" id="JRB-s0-wIv"/>
+                                                                <constraint firstAttribute="width" constant="80" id="Zeh-qZ-VOZ"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lF1-wG-aZW">
-                                                            <rect key="frame" x="88" y="0.0" width="257" height="80"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lF1-wG-aZW">
+                                                            <rect key="frame" x="93" y="0.0" width="252" height="80"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="The Incredible True Story" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79q-Qj-wZb">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="257" height="57"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="The Incredible True Story" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79q-Qj-wZb">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="252" height="23.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-t5-iE1">
-                                                                    <rect key="frame" x="0.0" y="57" width="257" height="23"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Logic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-t5-iE1">
+                                                                    <rect key="frame" x="0.0" y="28.5" width="46.5" height="23"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                     <color key="textColor" red="0.75966319668716586" green="0.75966319668716586" blue="0.75966319668716586" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6VS-Ql-vr6">
+                                                                    <rect key="frame" x="0.0" y="56.5" width="58" height="23.5"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotifySmallIcon" translatesAutoresizingMaskIntoConstraints="NO" id="OoK-Vp-SFQ">
+                                                                            <rect key="frame" x="0.0" y="2" width="20" height="20"/>
+                                                                        </imageView>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleMusicSmallIcon" translatesAutoresizingMaskIntoConstraints="NO" id="RTr-DJ-OrR">
+                                                                            <rect key="frame" x="30" y="2" width="20" height="20"/>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="8"/>
+                                                                </stackView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="79q-Qj-wZb" firstAttribute="top" secondItem="lF1-wG-aZW" secondAttribute="top" id="5qh-ac-GEN"/>
                                                                 <constraint firstItem="79q-Qj-wZb" firstAttribute="leading" secondItem="lF1-wG-aZW" secondAttribute="leading" id="DoL-DB-8HV"/>
-                                                                <constraint firstAttribute="trailing" secondItem="fgu-t5-iE1" secondAttribute="trailing" id="HQt-Pz-4o7"/>
-                                                                <constraint firstItem="fgu-t5-iE1" firstAttribute="top" secondItem="79q-Qj-wZb" secondAttribute="bottom" id="X5P-kb-isb"/>
-                                                                <constraint firstAttribute="bottom" secondItem="fgu-t5-iE1" secondAttribute="bottom" id="fZT-hk-Olb"/>
-                                                                <constraint firstItem="fgu-t5-iE1" firstAttribute="top" secondItem="79q-Qj-wZb" secondAttribute="bottom" id="hbW-a2-DvK"/>
+                                                                <constraint firstItem="79q-Qj-wZb" firstAttribute="top" secondItem="lF1-wG-aZW" secondAttribute="top" id="VB5-Gx-HGI"/>
                                                                 <constraint firstAttribute="trailing" secondItem="79q-Qj-wZb" secondAttribute="trailing" id="mCy-cJ-GyE"/>
-                                                                <constraint firstItem="fgu-t5-iE1" firstAttribute="leading" secondItem="lF1-wG-aZW" secondAttribute="leading" id="xQZ-BA-oeh"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
@@ -273,13 +281,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="thc-MA-bnD">
                                 <rect key="frame" x="40" y="141" width="295" height="41"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="SpotifyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="UuJ-Do-wMb">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpotifyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="UuJ-Do-wMb">
                                         <rect key="frame" x="0.0" y="0.0" width="138" height="41"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="138" id="UuL-2l-p4E"/>
                                             <constraint firstAttribute="width" secondItem="UuJ-Do-wMb" secondAttribute="height" multiplier="138:41" id="wdd-iZ-xuW"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAK-8R-R5r">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAK-8R-R5r">
                                         <rect key="frame" x="173" y="0.0" width="122" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <state key="normal" title="Connect">
@@ -294,13 +303,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="QcB-7M-NSF">
                                 <rect key="frame" x="40" y="202" width="295" height="41"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="AppleMusicLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ZUY-uE-3bD">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppleMusicLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ZUY-uE-3bD">
                                         <rect key="frame" x="0.0" y="0.0" width="138" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZUY-uE-3bD" secondAttribute="height" multiplier="138:41" id="q1G-bs-EaR"/>
+                                            <constraint firstAttribute="width" constant="138" id="zDe-m7-Pdh"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-Nk-wwe">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-Nk-wwe">
                                         <rect key="frame" x="173" y="0.0" width="122" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="tintColor" red="0.88413119316101074" green="0.63853591680526733" blue="0.23304176330566406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -500,5 +510,7 @@
         <image name="SearchIconHeader" width="32" height="29"/>
         <image name="SpotifyLogo" width="138" height="41"/>
         <image name="TheIncredibleTrueStory" width="220" height="220"/>
+        <image name="appleMusicSmallIcon" width="20" height="20"/>
+        <image name="spotifySmallIcon" width="20" height="20"/>
     </resources>
 </document>
