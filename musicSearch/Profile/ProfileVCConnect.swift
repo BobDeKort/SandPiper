@@ -61,6 +61,8 @@ extension ProfileViewController {
                                                   name: NSNotification.Name.Spotify.authURLOpened,
                                                   object: nil)
         
+        // FIXME: refactor and move to spotify manager
+        
         SPTAuth.defaultInstance().handleAuthCallback(withTriggeredAuthURL: url) { (error, session) in
             //Check if there is an error because then there won't be a session.
             if let error = error {

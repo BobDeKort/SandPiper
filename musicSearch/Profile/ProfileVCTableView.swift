@@ -14,7 +14,7 @@ extension ProfileViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "songCell") as! SongTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "songCell") as! SearchHistorySongTableViewCell
         
         return cell
     }

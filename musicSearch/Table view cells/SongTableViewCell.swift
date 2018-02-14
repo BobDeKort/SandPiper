@@ -10,9 +10,23 @@ import UIKit
 
 class SongTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var availabilityStackView: UIStackView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var albumCover: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        //availabilityStackView.isHidden = true
+        
+        self.isUserInteractionEnabled = false
+        
+        availabilityStackView.addArrangedSubview(UIImageView(image: #imageLiteral(resourceName: "spotifySmallIcon")))
+        availabilityStackView.addArrangedSubview(UIImageView(image: #imageLiteral(resourceName: "appleMusicSmallIcon")))
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

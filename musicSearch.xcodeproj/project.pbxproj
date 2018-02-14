@@ -20,6 +20,7 @@
 		C448389A203250070063CFAC /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4483899203250070063CFAC /* AlbumTableViewCell.swift */; };
 		C449AFDF2032AE34002358EB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449AFDE2032AE34002358EB /* UIViewControllerExtension.swift */; };
 		C449AFE12032B3FF002358EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C449AFE02032B3FE002358EB /* Assets.xcassets */; };
+		C488BCE02033CB7000BCAA8D /* SearchHistorySongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488BCDF2033CB7000BCAA8D /* SearchHistorySongCell.swift */; };
 		C4EF875B20296D09002AEA55 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EF875820296D09002AEA55 /* SpotifyAudioPlayback.framework */; };
 		C4EF875C20296D09002AEA55 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EF875920296D09002AEA55 /* SpotifyAuthentication.framework */; };
 		C4EF875D20296D09002AEA55 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EF875A20296D09002AEA55 /* SpotifyMetadata.framework */; };
@@ -47,6 +48,7 @@
 		C4483899203250070063CFAC /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		C449AFDE2032AE34002358EB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		C449AFE02032B3FE002358EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C488BCDF2033CB7000BCAA8D /* SearchHistorySongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistorySongCell.swift; sourceTree = "<group>"; };
 		C4EF875820296D09002AEA55 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 		C4EF875920296D09002AEA55 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		C4EF875A20296D09002AEA55 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				C448389720324FF80063CFAC /* SongTableViewCell.swift */,
 				C4483899203250070063CFAC /* AlbumTableViewCell.swift */,
+				C488BCDF2033CB7000BCAA8D /* SearchHistorySongCell.swift */,
 			);
 			path = "Table view cells";
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				C449AFDF2032AE34002358EB /* UIViewControllerExtension.swift in Sources */,
 				C4335F252032CC980022278D /* ProfileVCConnect.swift in Sources */,
 				C40A8EDE202394AE0085E22D /* AppDelegate.swift in Sources */,
+				C488BCE02033CB7000BCAA8D /* SearchHistorySongCell.swift in Sources */,
 				C40A8EE0202394AE0085E22D /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
