@@ -13,14 +13,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Set the status bar at the top of the screen to white
         UIApplication.shared.statusBarStyle = .lightContent
-        
+
+        let isloggedIn = KeyChainManager.instance.getUserToken()
+        if isloggedIn != nil {
+            setTabbarControllerAsRoot()
+        } else {
+            setLoginAsRoot()
+        }
+
         // Checks Spotify permissions for the app
         setupSpotify()
         return true
+    }
+    
+    func setTabbarControllerAsRoot() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        self.window?.rootViewController = storyBoard.instantiateInitialViewController()
+    }
+    
+    func setLoginAsRoot() {
+        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+        let vc = storyBoard.instantiateInitialViewController() as? LoginViewController
+        vc?.window = self.window
+        self.window?.rootViewController = vc
     }
     
     func setupSpotify() {
@@ -28,12 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SPTAuth.defaultInstance().redirectURL = Constants.redirectURI
         SPTAuth.defaultInstance().sessionUserDefaultsKey = Constants.sessionKey
         
-        SPTAuth.defaultInstance().requestedScopes = [SPTAuthPlaylistReadPrivateScope,
-                                                     SPTAuthPlaylistReadCollaborativeScope,
-                                                     SPTAuthPlaylistModifyPublicScope,
-                                                     SPTAuthPlaylistModifyPrivateScope]
-                                                     //SPTAuthUserLibraryReadScope,
-                                                     //SPTAuthUserLibraryModifyScope]
+        SPTAuth.defaultInstance().requestedScopes = [ SPTAuthPlaylistReadPrivateScope,
+            SPTAuthPlaylistReadCollaborativeScope,
+            SPTAuthPlaylistModifyPublicScope,
+            SPTAuthPlaylistModifyPrivateScope]
+            //SPTAuthUserLibraryReadScope,
+            //SPTAuthUserLibraryModifyScope]
         
     }
     

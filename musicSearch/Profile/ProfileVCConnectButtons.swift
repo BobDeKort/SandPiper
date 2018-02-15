@@ -51,12 +51,14 @@ extension ProfileViewController {
     func setCheckboxSpotifyButton() {
         spotifyConnectButton.setTitle("", for: .normal)
         spotifyConnectButton.setImage(#imageLiteral(resourceName: "CheckBox"), for: .normal)
+        spotifyConnectButton.layer.borderWidth = 0
         spotifyConnectButton.imageView?.contentMode = .scaleAspectFit
     }
     
     func setCheckboxAppleMusicButton() {
         appleMusicConnectButton.setTitle("", for: .normal)
         appleMusicConnectButton.setImage(#imageLiteral(resourceName: "CheckBox"), for: .normal)
+        appleMusicConnectButton.layer.borderWidth = 0
         appleMusicConnectButton.imageView?.contentMode = .scaleAspectFit
     }
     

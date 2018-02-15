@@ -75,8 +75,7 @@ extension ProfileViewController {
                 print("Spotify Token: \(session.accessToken!))")
                 KeyChainManager.instance.setSpotifyToken(token: session.accessToken)
                 // If there is use it to login to the audio streaming controller where we can play music.
-                // SPTAudioStreamingController.sharedInstance().login(withAccessToken: session.accessToken)
-                
+
                 // Updated the connect buttons to check box buttons
                 self.successfullLogin(service: "Spotify")
             }
