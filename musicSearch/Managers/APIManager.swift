@@ -12,7 +12,11 @@ import Alamofire
 class APIManager {
     static let instance = APIManager()
     
+    #if DEBUG
     let baseUrl = "https://music-search.herokuapp.com"
+    #else
+    let baseUrl = "https://music-search.herokuapp.com"
+    #endif
     
     func login(email: String, password: String, completionHandler: @escaping (Bool) -> ()) {
         if let url = URL(string: "\(baseUrl)/sessions?email=\(email)&password=\(password)") {
@@ -32,23 +36,19 @@ class APIManager {
                     return
                 }
                 
-                // Check if json returned is valid
-                guard let json = response.result.value as? [String: AnyObject] else {
-                    print("didn't Login")
+                // Handle data, parse in User model
+                do {
+                    let decoder = JSONDecoder()
+                    let user = try decoder.decode(User.self, from: response.data!)
+                    if let token = user.userToken {
+                        print("Token: \(token)")
+                        KeyChainManager.instance.setUserToken(token: token)
+                        completionHandler(true)
+                    }
+                } catch let err {
+                    print("Err", err)
                     completionHandler(false)
-                    return
                 }
-                // Handle json
-                
-//                let decoder = JSONDecoder()
-//                let user = try! decoder.decode(User.self, from: json)
-//                print("User: \(user)")
-                
-                
-                
-                
-                print("Login JSON: \(json)")
-                completionHandler(true)
             }
         } else {
             print("No valid login url")
@@ -71,45 +71,28 @@ class APIManager {
             do {
                 let jsonData = try encoder.encode(params)
                 request.httpBody = jsonData
-                print("jsonData: ", String(data: request.httpBody!, encoding: .utf8) ?? "no body data")
+                
             } catch {
                 print("Something went wrong encoding json")
             }
             
-//            Alamofire.request(request).responseData(completionHandler: { (data) in
-//
-//                do {
-//                    let decoder = JSONDecoder()
-//                    let user = try decoder.decode(User.self, from: data.data!)
-//                    print(user)
-//                } catch let err {
-//                    print("Err", err)
-//                }
-//            })
-        
-            
-            
             // Make request
-            Alamofire.request(request).responseJSON { response in
+            Alamofire.request(request).response { response in
                 // Check if there is an error
-                guard response.result.error == nil else {
-                    print(response.result.error!)
+                print("Response")
+                
+                guard response.error == nil else {
+                    print(response.error!)
                     completionHandler(false)
                     return
                 }
 
-//                // Check if json returned is valid
-//                guard let json = response.result.value as? [String: AnyObject] else {
-//                    print("didn't sign up")
-//                    completionHandler(false)
-//                    return
-//                }
-                
                 // Handle data, parse in User model
                 do {
                     let decoder = JSONDecoder()
                     let user = try decoder.decode(User.self, from: response.data!)
                     if let token = user.userToken {
+                        print("Token: \(token)")
                         KeyChainManager.instance.setUserToken(token: token)
                         completionHandler(true)
                     }

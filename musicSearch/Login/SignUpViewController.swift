@@ -32,7 +32,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
     }
     
     func signUp(name: String, email: String, password: String) {
